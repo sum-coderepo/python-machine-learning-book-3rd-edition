@@ -131,7 +131,7 @@ ppn.fit(X_train_std, y_train)
 
 # **Note**
 # 
-# - You can replace `Perceptron(n_iter, ...)` by `Perceptron(max_iter, ...)` in scikit-learn >= 0.19. The `n_iter` parameter is used here deriberately, because some people still use scikit-learn 0.18.
+# - You can replace `Perceptron(n_iter, ...)` by `Perceptron(max_iter, ...)` in scikit-learn >= 0.19. The `n_iter` parameter is used here deliberately, because some people still use scikit-learn 0.18.
 
 
 
@@ -363,7 +363,7 @@ class LogisticRegressionGD(object):
 
 
 
-X_train_01_subset = X_train[(y_train == 0) | (y_train == 1)]
+X_train_01_subset = X_train_std[(y_train == 0) | (y_train == 1)]
 y_train_01_subset = y_train[(y_train == 0) | (y_train == 1)]
 
 lrgd = LogisticRegressionGD(eta=0.05, n_iter=1000, random_state=1)
